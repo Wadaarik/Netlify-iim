@@ -8,8 +8,10 @@ script:
   - yarn test --watchAll=false
   - yarn build
 on:
-  branch: master
+  branch: main
 deploy:
   provider: heroku
   api_key: $HEROKU_KEY
   app: $HEROKU_APP
+  on:
+    branch: main
